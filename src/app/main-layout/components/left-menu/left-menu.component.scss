@@ -1,0 +1,60 @@
+.left-menu {
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+
+  &-text {
+    padding: 0 0.75rem;
+    font-size: 1.125rem;
+    font-weight: 400;
+  }
+
+  &-item {
+    display: flex;
+    align-items: center;
+    height: 3.25rem;
+    color: #fff;
+    cursor: pointer;
+    padding: 0.25rem 1.25rem;
+    transition: background-color 0.2s linear 0s;
+
+    &:hover {
+      background-color: #182531;
+    }
+
+    &.link {
+      &.active {
+        color: #009688;
+      }
+    }
+  }
+
+  &-subitem {
+    font-weight: 600;
+    padding: 0 1.25rem 0 0.5rem;
+    height: 3.25rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: #fff;
+    cursor: pointer;
+    border: unset;
+    outline: none;
+    transition: color 0.2s linear 0s;
+
+    &:hover {
+      color: #009688;
+    }
+
+    .left-menu-text {
+      font-size: 1.4rem;
+      font-weight: 400;
+      display: flex;
+    }
+
+    &.active {
+      color: #009688;
+      font-weight: 600;
+    }
+  }
+}

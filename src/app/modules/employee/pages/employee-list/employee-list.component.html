@@ -1,0 +1,22 @@
+<ng-container *ngIf="isLoading$ | async">
+  <demo-spinner></demo-spinner>
+</ng-container>
+
+<div class="main-container">
+  <a mat-raised-button [routerLink]="['./', 'create']">Create employee</a>
+
+  <ng-container *ngIf="(employees$ | async) as employeesData">
+    <demo-table [dataSource]="employeesData?.body || []"
+                [columns]="(columns$ | async) || []"
+                [actions]="(actions$ | async) || []"
+                [pageIndex]="(filterValue$ | async)?.page || 0"
+                [pageSize]="(filterValue$ | async)?.size || 10"
+                [totalItems]="employeesData?.totalCount || 0"
+                (rowAction)="onRowAction($event)"
+                (pageChange)="onPageChange($event)"></demo-table>
+  </ng-container>
+</div>
+
+
+
+

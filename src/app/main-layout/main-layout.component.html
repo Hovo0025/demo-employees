@@ -1,0 +1,12 @@
+<demo-header (triggerSidenav)="onTriggerSidenav()"></demo-header>
+<mat-sidenav-container class="sidenav-container container-fluid" (backdropClick)="onTriggerSidenav()">
+  <mat-sidenav class="sidenav-left" [opened]="isSidenavOpened" [mode]="'side'">
+    <demo-left-menu [routes]="navbarRoute"></demo-left-menu>
+  </mat-sidenav>
+
+  <mat-sidenav-content class="sidenav-content">
+    <div id="main">
+      <router-outlet></router-outlet>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>

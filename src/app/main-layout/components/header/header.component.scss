@@ -1,0 +1,101 @@
+.header {
+  display: flex;
+  align-items: center;
+  height: 4.5rem;
+  box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.1);
+  z-index: 10;
+  position: relative;
+
+  &-left {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 290px;
+    background-color: #182531;
+    box-shadow: 0 5px 15px 0 rgb(0 0 0 / 20%);
+    height: 100%;
+    flex-shrink: 0;
+    position: relative;
+    padding: 0 24px;
+    box-sizing: border-box;
+    .back {
+      position: absolute;
+      width: 2.5rem;
+      cursor: pointer;
+      padding: 0;
+      right: -1.25rem;
+      display: none;
+    }
+  }
+
+  &-right {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    height: 100%;
+    padding: 0 24px;
+    .mat-select {
+      width: 8rem;
+      flex-shrink: 0;
+      height: 2.5rem;
+      line-height: 2.5rem;
+      padding: 0 0.5rem;
+      border-radius: 0.5rem;
+      border: 1px solid #A6B5C0;
+      margin: 0 0.5rem;
+    }
+    .profile {
+      width: 2.5rem;
+      height: 2.5rem;
+      img {
+        width: 2.5rem;
+        height: 2.5rem;
+        object-fit: contain;
+      }
+    }
+    button.settings {
+     box-shadow: unset;
+    }
+    button.settings:hover {
+
+      background: #009688!important;
+    }
+    ::ng-deep button.settings.mdc-fab.mat-mdc-fab.mat-primary.mat-mdc-button-base.mdc-fab--extended.mat-mdc-extended-fab {
+      box-shadow: unset;
+    }
+  }
+
+  .title {
+    color: aliceblue; font-size: 22px
+  }
+
+}
+.burger-menu {
+  position: relative;
+  width: 30px;
+  cursor: pointer;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  span {
+    &, &:before, &:after {
+      display: block;
+      background-color: #fff;
+      position: absolute;
+      height: 4px;
+      width: 30px;
+      transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
+      border-radius: 2px;
+    }
+    &:before {
+      content: '';
+      margin-top: -8px;
+    }
+    &:after {
+      content: '';
+      margin-top: 8px;
+    }
+  }
+}

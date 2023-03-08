@@ -1,0 +1,21 @@
+.sidenav {
+  &-container {
+    height: calc(100vh - 4.5rem);
+    overflow: hidden;
+  }
+  &-left {
+    width: 100%;
+    background: #1E2D3B;
+    max-width: 290px;
+    border: none;
+    padding: 12px 16px;
+    box-sizing: border-box;
+  }
+}
+mat-sidenav-content.mat-drawer-content.mat-sidenav-content.sidenav-content {
+  overflow: hidden;
+}
+
+#main {
+  padding: 0 1.2rem;
+}

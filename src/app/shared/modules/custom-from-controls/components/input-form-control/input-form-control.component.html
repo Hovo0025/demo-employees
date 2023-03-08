@@ -1,0 +1,4 @@
+<mat-form-field appearance="outline">
+  <mat-label>{{label}}</mat-label>
+  <input matInput type="text" [placeholder]="label" (keyup)="onSetValue()" [(ngModel)]="value"/>
+</mat-form-field>
